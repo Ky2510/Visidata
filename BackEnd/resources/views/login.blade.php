@@ -4,7 +4,6 @@
 <h2>Halaman Login</h2>
 <div class="row">
     <div class="col-lg-6">
-
         <form action="{{ route('login.store') }}" method="POST">
             @csrf
             <div class="form-group">
