@@ -28,5 +28,14 @@ API (Postman)
    b. Insert
       - http://127.0.0.1:8000/api/transaksi/store
       - value ('item_id','quantity')
-
 note: pastikan login terlebih dahulu dan memasukan token kedalam bearer token setiap mengakses route kecuali register dan login
+
+
+WEB
+1. Register 
+  - http://127.0.0.1:8000/register (GET)
+2. Login
+  - http://127.0.0.1:8000/login (GET)
+3. Home 
+  - http://127.0.0.1:8000/home (GET)
+  
