@@ -1,0 +1,32 @@
+1. Buka folder Backend didalam VSCODE
+2. Buka terminal "composer install"
+3. Buka terminal "php artisan key:generate" jika key belum ada 
+4. Buat database "db_visidata"
+5. Buka terminal "php artisan migrate"
+6. Jalankan aplikasi, buka terminal "php artisan migrate"
+
+API (Postman)
+1. Register 
+  - http://127.0.0.1:8000/api/register (POST)
+  - value ('name', 'email', 'password')
+2. Login
+  - http://127.0.0.1:8000/api/login (POST)
+  - value ('email', 'password')
+  - ambil token
+3. User yang sedang login 
+  - http://127.0.0.1:8000/api/me (GET)
+  - masukkan token kedalam bearer token
+4. Barang 
+   a. Insert
+      - http://127.0.0.1:8000/api/barang/store (POST)
+      - value ('name','price')
+   b. Show
+      - http://127.0.0.1:8000/api/barang (GET)
+5. Transaksi
+   a. Show
+      - http://127.0.0.1:8000/api/transaksi (GET)
+   b. Insert
+      - http://127.0.0.1:8000/api/transaksi/store
+      - value ('item_id','quantity')
+
+note: pastikan login terlebih dahulu dan memasukan token kedalam bearer token setiap mengakses route kecuali register dan login
