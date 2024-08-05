@@ -12,7 +12,7 @@ Route::get('login', [AuthController::class, 'loginIndex'])->middleware('guest')-
 Route::post('login', [AuthController::class, 'loginWeb'])->name('login.store')->middleware('guest');
 Route::get('register', [AuthController::class, 'registerIndex'])->name('register')->middleware('guest');
 Route::post('register', [AuthController::class, 'registerWeb'])->name('register.store')->middleware('guest');
-Route::post('logout', [AuthController::class, 'logoutWeb'])->name('logout')->middleware('auth');
+Route::get('logout', [AuthController::class, 'logoutWeb'])->name('logout')->middleware('auth');
 
 
 Route::get('/home', [HomeController::class, 'index'])->name('home.index')->middleware('auth');

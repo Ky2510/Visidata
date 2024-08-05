@@ -12,11 +12,16 @@
                 </li>
                 <li class="nav-item">
                     @auth
-                    <a class="nav-link active" aria-current="page" href="{{ route('home.index') }}">
-                        <form action="{{ route('logout') }}" method="POST">
+                    <a class="nav-link active" aria-current="page" href="">Hello, {{ auth()->user()->name }}</a>
+                    @endauth
+                </li>
+                <li class="nav-item">
+                    @auth
+                    <a class="nav-link active" aria-current="page" href="{{ route('logout') }}"> Logout
+                        {{-- <form action="{{ route('logout') }}" method="POST">
                             @csrf
-                            <button type="submit">Logout</button>
-                        </form>
+                            <button type="submit" class="btn btn-sm btn-primary">Logout</button>
+                        </form> --}}
                     </a>
                     @endauth
                 </li>
